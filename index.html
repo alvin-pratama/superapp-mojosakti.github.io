@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Notifikasi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* background-color: #800303; */
+            background: linear-gradient(180deg, #d61f03, #810202); /* Gradien dari kuning ke oranye */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .update-card {
+            max-width: 400px;
+            width: 100%;
+        }
+        .update-card img {
+            width: 70%; /* Mengatur lebar gambar agar sesuai dengan lebar kontainer */
+            height: auto; /* Menjaga aspek rasio gambar */
+        }
+        .card {
+            border-left: 7px solid #ff9307; /* Menambahkan border amber di sisi kiri kartu */
+            border-radius: 15px; /* Menambahkan border radius pada kartu */
+            overflow: hidden; /* Menjaga isi kartu tetap berada dalam border radius */
+        }
+    </style>
+</head>
+<body>
+    <div class="update-card">
+        <center><img src="logo.png" alt="logo aplikasi"></center>
+        <br>
+        <br>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <br>
+                <center><h4 class="card-title">- Pembaruan Tersedia -</h4></center>
+                <!-- <br>
+                <center><h4 class="card-title">SuperApp Mojosakti</h4></center>
+                <center><p style="font-style: italic;">"Satu Aplikasi Semua Terlayani"</p></center> -->
+                <br>
+                <center><p class="card-text text-secondary" style="font-size: smaller;">"Versi baru aplikasi kami telah tersedia dengan fitur-fitur terbaru dan peningkatan performa. Segera perbarui melalui playstore untuk mendapatkan pengalaman terbaik."</p></center>
+                <!-- <p>jika link "perbarui sekarang" mengalami trouble silahkan perbarui melalui playstore, dengan menghapus saat ini kemudian instal aplikasi pembaruan</p> -->
+                <br>
+                <br>
+                <button class="btn btn-danger btn-block" disabled onclick="update()">Perbarui Sekarang</button>
+                <button class="btn btn-link btn-block text-danger" disabled onclick="skipUpdate()">Lewati</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function skipUpdate() {
+            alert('Anda memilih untuk memperbarui nanti.');
+        }
+        function update() {
+            window.location.href = "https://play.google.com/store/apps/details?id=superapp-mojosakti.mojokertokab.go.id&hl=id";
+        }
+    </script>
+</body>
+</html>
